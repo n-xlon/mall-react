@@ -1,0 +1,116 @@
+.goods-contains
+  width: 100%
+  height: 100%
+
+  .search-header
+    width: 100%
+    height: 2.7rem
+    box-shadow: 0 0 10px 1px #dddddd
+    display: flex
+    align-items: center
+    z-index: 10
+    padding: 5px 0
+    box-sizing: border-box
+    //justify-content: center
+
+    .back
+      font-size: 16px
+      color: #000
+      margin-left: .8rem
+
+    .search-frame
+      width: 12rem
+      height: 1.8rem
+      background: #f7f7f7
+      border-radius: 20px
+      position: relative
+      margin-left: 2rem
+      display: flex
+      align-items: center
+      padding: 0 10px
+      box-sizing: border-box
+
+      .search-icon
+        font-size: 15px
+        color: #ddd
+        width: 20px
+        display: block
+        margin: 3px 10px 0 0
+
+      .search-item
+        flex: 1
+        //width: 100%
+        height: 100%
+        background: transparent
+        outline: none
+        border: none
+        box-sizing: border-box
+        &::placeholder
+          color: #dddddd
+
+
+  .classify-goods
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+
+    .goods-list
+      flex: 1
+      display: flex
+      margin-bottom: 3rem
+      height: 100%
+      overflow: hidden
+
+      .classify-goods-list
+        width: 5.5rem
+        background: #f7f7f7
+
+        .list
+          width: 100%
+          height: 100%
+          padding: 10px 0
+          box-sizing: border-box
+
+          .title
+            width: 100%
+            height: 2rem
+            color: #232323
+            line-height: 2rem
+            font-size: .8rem
+
+            &.active
+              background: #ffffff
+
+      .classify-goods-content
+        flex: 1
+        overflow: auto
+
+        .contain
+          width: 100%
+          height: 100%
+          text-align: left
+
+          .title
+            font-size: 16px
+            font-weight: bold
+            color: #000
+            display: block
+            padding: 10px 10px 0
+            box-sizing: border-box
+
+          .goods-item
+            width: 6rem
+            height: 7.5rem
+            text-align: center
+            display: inline-block
+            margin-left: 10px
+            margin-top: 10px
+            font-size: 13px
+            color: #232323
+
+            img
+              width: 100%
+
+
+

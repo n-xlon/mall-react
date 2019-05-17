@@ -1,0 +1,34 @@
+.Tab
+  width: 100%
+  height: 2.5rem
+  padding: 0 1rem
+  box-sizing: border-box
+  //display: flex
+  background: #fff
+  overflow-x: auto
+  position: relative
+
+  .bg
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+    .tab-list
+      height: 100%
+      width: 5rem
+      color: #232323
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      box-sizing: border-box
+      border-bottom: 2px solid #fff
+      border-bottom-right-radius: 2px
+      border-bottom-left-radius: 2px
+
+      &.active
+        border-bottom: 2px solid #1e90ff
+        transition: border-bottom-color 2s
+
+  &::-webkit-scrollbar
+    display: none

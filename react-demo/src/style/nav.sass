@@ -1,0 +1,36 @@
+
+.nav-toolbar
+  width: 100%
+  height: 3rem
+  position: fixed
+  bottom: 0
+  display: flex
+  //border: 1px solid #ccc
+  box-shadow: 0 0 6px 0 #ddd
+  background: #ffffff
+
+  //.item
+  //  width: 100%
+  //  height: 100%
+  //  display: flex
+  //  justify-content: space-around
+  //  align-items: center
+  //  border-top: 1px solid #cccccc
+
+  .item-list
+    cursor: pointer
+    outline: none
+    -webkit-user-select: none
+    -webkit-user-drag: none
+    //border-right: 1px solid #cccccc
+    height: 100%
+    flex: 1
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    color: #000
+    flex-direction: column
+    font-size: .5em
+
+    &.active
+      color: dodgerblue
