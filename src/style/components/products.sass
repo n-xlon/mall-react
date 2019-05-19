@@ -1,0 +1,63 @@
+.products-list
+  width: 100%
+  height: 100%
+  position: relative
+
+  .filter-goods
+    width: 100%
+    padding: 5px 0
+    border-bottom: 1px solid #f5f5f5
+
+    .screening
+      font-size: .9rem
+
+
+  .list
+    width: 100%
+    height: 7rem
+    display: flex
+    margin-top: 10px
+
+    &:first-child
+      margin-top: 0
+
+    .product-img
+      width: 7rem
+      height: 7rem
+
+      .img
+        width: 100%
+        height: 100%
+
+    .desc
+      flex: 1
+      border-bottom: 1px solid #f5f5f5
+
+      .title
+        color: #000
+        font-size: .9rem
+
+      .money
+        color: #ff0000
+        font-weight: 500
+
+        .font
+          font-size: 1.25rem
+
+      .labels
+        width: 100%
+
+        .item
+          font-size: .6rem
+          display: inline-block
+          padding: 0 .3rem
+          box-sizing: border-box
+          color: #8e8e8e
+          border-right: 1px solid #f7f7f7
+
+  .filter-details
+    background: #cccccc
+    position: absolute
+    top: 2rem
+    right: -1rem
+    transition: all 1s

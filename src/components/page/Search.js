@@ -1,9 +1,22 @@
 import React, {Component} from 'react'
+import Products from './Products'
 
 export default class SearchPage extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      searchContent: '',
+      showSearchResult: false
+    }
   }
+
+  inputSearchCont (v) {
+    console.log(!!v.target.value.trim())
+    this.setState({
+      showSearchResult: !!v.target.value.trim()
+    })
+  }
+
 
   componentDidMount() {
     let dom = document.getElementsByClassName('sec')[0]
@@ -18,14 +31,20 @@ export default class SearchPage extends Component {
           <span className='iconfont icon-fanhui back' onClick={() => this.props.history.push('/category')}></span>
           <div className='search-frame'>
             <span className='iconfont icon-sousuo search-icon'></span>
-            <input className='search-item sec' type="text" placeholder='输入商品'/>
+            <input className='search-item sec' type="text" placeholder='输入商品' onInput={this.inputSearchCont.bind(this)}/>
           </div>
         </div>
         <div className='search-cont'>
-          <div className='history'>
-            <span className='label'>历史搜索</span>
-            <div></div>
-          </div>
+          {
+            this.state.showSearchResult ? (
+              <Products></Products>
+            ) : (
+              <div className='history'>
+                <span className='label'>历史搜索</span>
+                <div></div>
+              </div>
+            )
+          }
         </div>
       </div>
     )
