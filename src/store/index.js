@@ -8,4 +8,4 @@ const unsubscrible = store.subscribe(() => store.state = store.getState().state)
 
 window.store = store
 
-store.dispatch(userMsg())
+console.log(store.dispatch(userMsg()))

@@ -59,7 +59,6 @@ class User extends Component {
         <div className='header'>
           <i className='iconfont icon-fanhui back' onClick={() => window.history.back()}></i>
           <span>用户登录</span>
-          <i className='iconfont icon-gengduo-copy m-list'></i>
         </div>
         <div className='login-cont'>
           {

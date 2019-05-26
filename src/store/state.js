@@ -1,3 +1,4 @@
 export const states = {
-  isLogin: false
+  isLogin: false,
+  user: {}
 }

@@ -4,7 +4,7 @@ import {states} from "./state"
 
 function changeState(state = states, action) {
   if (action.type === 'user') {
-    return {...state, ...{isLogin: action.value}}
+    return {...state, ...{isLogin: action.value.isLogin}, user: action.value}
   }
   return state
 }
