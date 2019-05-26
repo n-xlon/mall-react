@@ -86,10 +86,10 @@ class Home extends Component {
   }
 
   changeScrollType = () => {
-    let dom = document.querySelector('html')
-    if (dom.scrollTop === 0 && this.state.isScrolling) {
+    let scrollT = document.documentElement.scrollTop || document.querySelector('body').scrollTop
+    if (scrollT === 0 && this.state.isScrolling) {
       this.setState({isScrolling: false})
-    } else if (!this.state.isScrolling) {
+    } else if (scrollT > 0 && !this.state.isScrolling) {
       this.setState({isScrolling: true})
     }
   }
@@ -101,7 +101,7 @@ class Home extends Component {
   }
 
   returnTop = () => {
-    document.querySelector('html').scrollTop = 0
+    document.documentElement.scrollTop = document.querySelector('body').scrollTop = 0
   }
 
   render() {

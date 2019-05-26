@@ -10,7 +10,7 @@ export default class Products extends Component{
         height: 0
       },
       productList: [
-        {img: require('../../static/images/list-img1.png'), title: 'Apple 苹果 iPhone Xs Max 手机 金色 全网通 256GB', money: '800', float: '00'},
+        {img: require('../../static/images/list-img1.png'), title: 'Apple 苹果 iPhone Xs Max 手机 金色 全网通 256GB', money: '800', float: '00', oldMoney: 23.5, label: ['A12芯', 'ios系统', 'SSD']},
         {img: require('../../static/images/list-img1.png'), title: 'Apple 苹果 iPhone Xs Max 手机 金色 全网通 256GB', money: '800', float: '00', label: ['A10芯', 'ios系统']}
       ]
     }
@@ -46,7 +46,15 @@ export default class Products extends Component{
                       ))
                     }
                   </div>
-                  <p className='money'><span className='font'>{res.money}</span><span>.{res.float}</span></p>
+                  <p className='money'>
+                    <span className='font'>¥{res.money}</span>
+                    <span>.{res.float}</span>
+                    {
+                      'oldMoney' in res ? (
+                        <span className='old'>{res.oldMoney}</span>
+                      ) : null
+                    }
+                  </p>
                 </div>
               </div>
             ))
