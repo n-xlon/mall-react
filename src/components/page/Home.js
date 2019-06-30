@@ -95,7 +95,7 @@ class Home extends Component {
   }
 
   // 返回到用户界面
-  toLogin () {
+  toLogin = () => {
     console.log(this.props.history)
     if (!store.state.isLogin) this.props.history.push('/user')
   }
