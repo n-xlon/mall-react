@@ -8,3 +8,8 @@ export function userMsg() {
   }
   return {type: ''}
 }
+
+export function changeShopAddress({addr, index}) {
+  console.log(addr, index)
+  return {type: 'changeAddr', data: {addr, index}}
+}

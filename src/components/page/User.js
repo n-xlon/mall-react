@@ -33,11 +33,10 @@ class User extends Component {
 
   userLogin = () => {
     let obj = {}
-    this.state.formList.map(it => {
+    this.state.formList.forEach(it => {
       obj[it.key] = it.value.trim()
     })
     this.storge.setCookie('userLogin', JSON.stringify(obj), 2 * 60 * 60 * 1000)
-    console.log(this.props)
     this.props.history.push('/user-detail')
   }
 

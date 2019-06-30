@@ -33,9 +33,13 @@ function nav(OtherComponent) {
 
     componentWillMount() {
       let msg = JSON.parse(utils.getCookie({key: 'userLogin'}))
-      Object.keys(this.state.toolbar).map(it => {
+      let navTool = this.state.toolbar
+      Object.keys(navTool).forEach(it => {
         if (it === 'user') {
-          this.state.toolbar[it].text = (msg == null || !msg.name) ? '未登录' : '用户'
+          navTool[it].text = (msg == null || !msg.name) ? '未登录' : '用户'
+          if (navTool[it].text !== this.state.toolbar[it].text) {
+            this.setState({toolbar: navTool})
+          }
         }
       })
     }
