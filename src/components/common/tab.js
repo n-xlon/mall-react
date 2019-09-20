@@ -21,7 +21,7 @@ class Tab extends Component {
   render() {
     return (
       <div className='Tab'>
-        <div className='bg' style={{'width': `${tabList.length * 5}rem`}}>{
+        <div className='bg' style={{'width': `${tabList.length * 1.5}rem`}}>{
           tabList.map((v, index) => (
             <a
               key={index}

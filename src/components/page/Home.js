@@ -109,7 +109,7 @@ class Home extends Component {
       <div className='content' onClick={(e) => (this.clearModal(e))}>
         <div className='header' style={{'background': this.state.isScrolling ? '#fb3925' : ''}}>
           <i className='iconfont icon-gengduo-2 more-list' onClick={(e) => (this.getDetailList(e))}></i>
-          <span>Header</span>
+          <span className='header-text'>Header</span>
           <i className='iconfont icon-denglu login-btn' onClick={this.toLogin}></i>
         </div>
         <div className='swift-img'>{
