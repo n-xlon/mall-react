@@ -1,0 +1,61 @@
+.screen-contain
+  width: 100%
+  height: 100%
+  padding: 20px 0
+  position: relative
+  box-sizing: border-box
+
+  .screen-contain_label
+    padding: 10px
+    box-sizing: border-box
+
+    .screen-contain_title
+      font-size: .37rem
+      padding: 0 10px
+
+      span
+        font-size: .35rem
+        margin-left: .3rem
+        color: #cccccc
+
+    .screen-contain_brand-name
+      display: inline-block
+      border-radius: 3px
+      border: 1px solid #dddddd
+      font-size: .35rem
+      margin-right: 10px
+      padding: .2rem .3rem
+      box-sizing: border-box
+      line-height: .5rem
+
+      &.actived
+        border: 1px solid #207AFF
+
+  .screen-footer
+    width: 100%
+    position: absolute
+    bottom: .5rem
+    left: 0
+    display: flex
+    align-items: center
+    justify-content: space-around
+
+    .screen-footer_cancel
+      border: 1px solid #cccccc
+      border-radius: 3px
+      font-size: .3rem
+      padding: .15rem 1rem
+      box-sizing: border-box
+      display: inline-block
+
+      &:hover
+        color: #ffffff
+        border: 1px solid #207AFF
+        background: #207AFF
+
+    .screen-footer_ok
+      @extend .screen-footer_cancel
+      background: #ff0000
+      color: #ffffff
+      border: 1px solid transparent
+

@@ -11,14 +11,16 @@ class App extends Component {
     console.log(this.props)
   }
   componentWillMount() {
+    const doc = document.documentElement
     if (/iPhone|Android/.test(navigator.appVersion)) {
       const changeFontSize = () => {
-        const doc = document.documentElement
         let rem = 100 / 750
         doc.style.fontSize = rem * 100 + 'vw'
       }
       changeFontSize()
       window.addEventListener('resize', changeFontSize)
+    } else {
+      doc.style.fontSize = '54px'
     }
   }
   render() {

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 import Nav from '../common/nav'
 import Search from "./Search";
+import Header from '../common/header'
 
 class Category extends Component {
   constructor(props) {
@@ -50,11 +51,11 @@ class Category extends Component {
   }
 
   linkToSearch = () => {
-    window.location.href = '/category/search'
+    this.props.history.push('/category/search')
   }
 
-  selectGoods () {
-    console.log('goods')
+  selectGoods = (parmas) => {
+    this.props.history.push({pathname: '/details', parmas})
   }
 
   render() {
@@ -65,13 +66,12 @@ class Category extends Component {
             <Route path='/category/search' component={Search} />
           ) : (
             <div className='classify-goods'>
-              <div className='search-header'>
-                <span className='iconfont icon-fanhui back' onClick={() => this.historyBack()}></span>
-                <div className='search-frame'>
+              <Header backCallback={this.historyBack}>
+                <div papa="content" className='search-frame'>
                   <span className='iconfont icon-sousuo search-icon'></span>
                   <input className='search-item' type="text" placeholder='输入商品' onFocus={() => this.linkToSearch()}/>
                 </div>
-              </div>
+              </Header>
               <div className='goods-list'>
                 <div className='classify-goods-list'>
                   <ul className='list'>
@@ -96,7 +96,7 @@ class Category extends Component {
                         <span className='title'>{v.title}</span>
                         {
                           v.cont.map((ct, index) => (
-                            <div className='goods-item' key={index} onClick={this.selectGoods}>
+                            <div className='goods-item' key={index} onClick={() => this.selectGoods(ct)}>
                               <img src={ct.img} alt=""/>
                               <span>{ct.text}</span>
                             </div>

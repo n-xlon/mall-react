@@ -49,6 +49,7 @@
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
     "terser-webpack-plugin": "1.2.2",
+    "ujs_js": "^1.0.2",
     "url-loader": "1.1.2",
     "webpack": "4.28.3",
     "webpack-dev-server": "3.1.14",
@@ -123,6 +124,7 @@
     "babel-preset-react-native-stage-0": "^1.0.1",
     "babel-preset-stage-2": "^6.24.1",
     "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
     "react-redux": "^7.0.3",
     "redux-thunk": "^2.3.0"
   }

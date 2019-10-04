@@ -5,6 +5,7 @@ import Category from '../components/page/Category'
 import BuyCar from '../components/page/BuyCar'
 import User from '../components/page/User'
 import UserDetail from '../components/page/Person'
+import GoodDetails from '../components/page/GoodsDetails'
 // import Search from '../components/page/Search'
 
 export default () => (
@@ -19,6 +20,7 @@ export default () => (
       <Route path='/buyCar' component={BuyCar}></Route>
       <Route path='/user' component={User}></Route>
       <Route path='/user-detail' component={UserDetail}/>
+      <Route path='/details' component={GoodDetails}/>
     </Switch>
   </BrowserRouter>
 )

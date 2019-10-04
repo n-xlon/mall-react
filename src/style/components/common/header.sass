@@ -1,0 +1,46 @@
+.common-header
+  width: 100%
+  height: 1.1rem
+  text-align: center
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &.is_fixed
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 10
+
+  .common-header_back
+    width: .7rem
+    height: .7rem
+    position: absolute
+    top: 0
+    bottom: 0
+    left: .4rem
+    color: #cccccc
+    display: inline-block
+    line-height: .7rem
+    margin: auto
+
+    .iconfont
+      font-size: .4rem
+      font-weight: bold
+      position: absolute
+      left: 0
+      right: 0
+      margin: auto
+
+    &.back_bg
+      -webkit-border-radius: 50%
+      -moz-border-radius: 50%
+      border-radius: 50%
+      background: rgba(0, 0, 0, .5)
+      color: #ffffff
+
+  .common-header_name
+    color: #232323
+    font-size: .35rem
+    line-height: 1.1rem

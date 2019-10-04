@@ -7,23 +7,30 @@
     width: 100%
     padding: 5px 0
     border-bottom: 1px solid #f5f5f5
+    font-size: .5rem
 
     .screening
-      font-size: .9rem
+      font-size: .35rem
 
-
-  .list
-    width: 100%
-    height: 7rem
-    display: flex
+  .product-list_item
     margin-top: 10px
 
     &:first-child
       margin-top: 0
 
+  .list
+    width: 100%
+    //height: 3rem
+    display: flex
+    margin-top: 10px
+    margin-bottom: 20px
+
+    &:first-child
+      margin-top: 0
+
     .product-img
-      width: 7rem
-      height: 7rem
+      width: 3rem
+      height: 3rem
 
       .img
         width: 100%
@@ -35,36 +42,40 @@
 
       .title
         color: #000
-        font-size: .9rem
+        font-size: .35rem
 
       .money
         color: #ff0000
         font-weight: 500
+        font-size: .4rem
+        margin-top: .2rem
 
         .font
-          font-size: 1rem
+          //font-size: .5rem
 
         .old
           text-decoration: line-through
           color: #ccc
-          font-size: .8rem
-          margin-left: .7rem
+          font-size: .3rem
+          margin-left: .25rem
 
       .labels
         width: 100%
+        line-height: .2rem
 
         .item
-          font-size: .6rem
+          font-size: .3rem
           display: inline-block
-          padding: 0 .3rem
+          padding: 0 .2rem
           box-sizing: border-box
           color: #8e8e8e
           border-right: 1px solid #f7f7f7
 
   .filter-details
     background: #ffffff
-    position: absolute
-    top: 2rem
-    right: -1rem
+    position: fixed
+    top: 1rem
+    right: 0
+    bottom: 0
     transition: all .5s
     box-shadow: 0px 0px 4px #ccc

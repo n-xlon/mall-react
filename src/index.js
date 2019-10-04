@@ -5,6 +5,9 @@ import './style/index.sass';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {store} from "./store/index"
+const ujs = require('ujs_js')
+
+window.ujs = ujs
 
 ReactDOM.render(
   <Provider store={store}>

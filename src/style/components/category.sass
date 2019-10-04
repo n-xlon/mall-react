@@ -2,53 +2,6 @@
   width: 100%
   height: 100%
 
-  .search-header
-    width: 100%
-    height: 1rem
-    box-shadow: 0 0 10px 1px #dddddd
-    display: flex
-    align-items: center
-    z-index: 10
-    padding: 5px 0
-    box-sizing: border-box
-    //justify-content: center
-
-    .back
-      font-size: 16px
-      color: #000
-      margin-left: .3rem
-
-    .search-frame
-      width: 5rem
-      height: .7rem
-      background: #f7f7f7
-      border-radius: 20px
-      position: relative
-      margin-left: .8rem
-      display: flex
-      align-items: center
-      padding: 0 10px
-      box-sizing: border-box
-
-      .search-icon
-        font-size: 15px
-        color: #ddd
-        width: 20px
-        display: block
-        margin: 3px 10px 0 0
-
-      .search-item
-        flex: 1
-        //width: 100%
-        height: 100%
-        background: transparent
-        outline: none
-        border: none
-        box-sizing: border-box
-        &::placeholder
-          color: #dddddd
-
-
   .classify-goods
     width: 100%
     height: 100%
@@ -58,7 +11,7 @@
     .goods-list
       flex: 1
       display: flex
-      margin-bottom: 3rem
+      margin-bottom: 1rem
       height: 100%
       overflow: hidden
 
@@ -113,6 +66,35 @@
 
             img
               width: 100%
+
+.search-frame
+  width: 5rem
+  height: .7rem
+  background: #f7f7f7
+  border-radius: 20px
+  position: relative
+  display: flex
+  align-items: center
+  padding: 0 10px
+  box-sizing: border-box
+
+  .search-icon
+    font-size: 15px
+    color: #ddd
+    width: 20px
+    display: block
+    margin: 3px 10px 0 0
+
+  .search-item
+    flex: 1
+    //width: 100%
+    height: 100%
+    background: transparent
+    outline: none
+    border: none
+    box-sizing: border-box
+    &::placeholder
+      color: #dddddd
 
 
 
